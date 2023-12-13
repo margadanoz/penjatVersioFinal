@@ -1,6 +1,0 @@
-Dia 6:
-
-- Corregida part visual, adaptada per movil. 
-- Afegides categories per jugar amb les seves arrays corresponents i la logica perque es resetejin els guions en canviar de
-	categoria perque no se sumin.
-- Afegida logica del localStorage per emmagatzemar la categoria amb la que se està jugant.
