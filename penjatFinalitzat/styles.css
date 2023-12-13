@@ -1,0 +1,284 @@
+/* Cambiamos fuente del juego */
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&family=Press+Start+2P&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P';
+}
+
+body{
+    background-color: #d5c7bc;
+    
+}
+
+/* LOGO JUEGO Y TITULO*/
+.titol img{
+    width: 20vh;
+    border-radius: 5px;
+    border: 2px solid #ff5900;
+}
+
+#titolJoc{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    height: 150px;
+}
+
+.titol{
+    display: flex;
+}
+
+.titol h1{
+    align-self: center;
+    margin-left: 10px;
+}
+
+
+/* CONTAINER PRINCIPAL CON PANEL Y RESTO DE COSAS*/
+
+.flex-container{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;    
+}
+/* CONTAINER DE DATOS DE JUEGO, TIEMPO E INTENTOS */
+.containerDatos{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    /* background-color: aquamarine; */
+    width: 100%;
+    margin-top: 0;
+}
+#titolJoc2{
+    flex: 1;
+    display: flex;
+    /* background-color: beige; */
+    justify-content: center;
+    text-align: center;
+   
+}
+
+.cronometro{
+    margin-top: 10px;
+    padding-bottom: 22px;
+    
+}
+/* CRONO POR LETRA */
+.cronoPorLetra{
+    margin-top: 10px;
+    color: #721121;
+}
+
+.titol{
+    margin-bottom: 50px;
+    color: #721121;
+    padding-bottom: 10px;
+    padding: 10px;
+
+}
+
+.intentsRestants{
+    color: #721121;
+    display: flex;
+    margin-top: 30px;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+#intents{
+    color: #721121;
+    padding: 20px;
+    /* margin-bottom: 50px; */
+}
+#nombreIntents{
+    color: #ff5900;
+}
+#seleccioLletra{
+    margin-top: 10px;
+}
+
+
+/* PANELL joc */
+.panelLetras{
+    display: flex;
+    flex-flow: row wrap;
+    /* margin-top: 100px; */
+    justify-content: center;
+    text-align: center;
+    width: 40%;
+    
+}
+
+.letra {
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 2px solid #721121;
+    border-radius: 5px;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5); /* Desplazamiento horizontal, desplazamiento vertical, sin desenfoque */
+}
+
+
+
+.letra:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+    color: white;
+    background-color: #82a5f2;
+}
+
+/* Per aals guions: */
+.guionesPalabra{
+    color: #721121;
+    margin-top: 30px;
+}
+
+/* Parte de mostrar errores y cronómetro */
+#mostraErrors{
+    display: flex;
+    flex-flow: column wrap;
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 50px;
+    align-items: center;
+}
+
+#mostraErrors h4, .cronometro, .cronoPorLetra{
+    color: #721121;
+}
+#nombreErrors{
+    color: #ff5900;
+}
+
+/* Clases especifiques per quan es cometen errors
+o s'encerten lletres, per modificar estil a Javascript */
+.incorrecta{
+    background-color: #c1121f;
+    border: 2px solid red;
+}
+
+.correcta{
+    background-color: lightgreen;
+    border: 2px solid green;
+}
+
+.correcta:hover{
+    background-color: lightgreen;
+    border: 2px solid green;
+    cursor: default;
+    transform: none;
+} 
+
+.letra .correcta:hover{
+    /* background-color: lightgreen;
+    border: 2px solid green; */
+    cursor: default;
+    transform: none;
+}
+
+.incorrecta:hover{
+    background-color: #c1121f;
+    border: 2px solid red;
+    transform: none;
+    cursor: default;
+}
+.letra .incorrecta:hover{
+    background-color: #c1121f;
+    border: 2px solid red;
+    transform: none;
+    cursor: default;
+}
+
+/* Para los paneles que se muestran cuando se gana1
+o se piedre el juego */
+.mensajeGanador, .mensajePerdedor{
+    display: none;
+}
+
+#tornarJugar{
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #ff5900;
+    border-radius: 10px;
+    cursor: pointer;
+    display: none;
+    color: white;
+}
+
+/* Muestra la palabra por la cual se estaba jiugando: */
+.palabraJuego{
+    display: none;
+    color: #721121;
+
+}
+
+/* POP DE GANAR O PERDER */
+#imagenPerder, #imagenGanar{
+    width: 40vh;
+    border-radius:10px;
+    border: 1px solid #ff5900;
+}
+
+/* Para el select de las categorias del juego */
+#categoriaJoc{
+    color: #721121;
+    margin-right: 20px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#categoriaJoc > option{
+    padding: 5px;
+    line-height: 1.5;
+}
+
+
+/* MEDIA QUERYS PER VERSIÓ MOVIL */
+@media screen and (max-width:400px) {
+
+        /* Canviar només part de lletres */
+        .panelLetras{
+           display: flex;
+           flex-flow: row wrap;
+            width: 100%;
+            /* display: block; */
+        }
+
+        .letra {
+            display: inline-block;
+            background-color: rgba(0, 0, 0, 0.3);
+            border: 2px solid #721121;
+            border-radius: 5px;
+            box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5); /* Desplazamiento horizontal, desplazamiento vertical, sin desenfoque */
+        }
+
+
+        #titolJoc{
+            order:1;
+        }
+
+        #categoriaJoc{
+            color: #721121;
+            margin-right: 20px;
+            padding: 5px;
+            border-radius: 10px;
+            margin-left: 40px;
+            margin-top: 10px;
+            margin-bottom: 30px;
+            
+        }
+        #titolJoc{
+            align-items: center;
+            text-align: center;
+        }
+}

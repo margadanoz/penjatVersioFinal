@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Ahorcado</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="titolJoc">
+        <div class="titol">
+            <img src="imagenesAhorcado/logo.jpeg" alt="">
+            <h1>El Penjat</h1>
+        </div>
+        <select name="categoria" id="categoriaJoc">
+            <option>Selecciona categoria</option>
+            <option value="categoriaMamiferos">Mamífers</option>
+            <option value="categoriaOcells">Ocells</option>
+            <option value="categoriaMitologics">Animals Mitològics</option>
+            <option value="categoriaPokemon">Pokémon</option>
+        </select>
+    </div>
+    
+    <div class="flex-container">
+         <!-- Parte para ir poniendo la palabra -->
+         
+        <!-- Capçalera joc -->
+        <div class="containerDatos">
+            <div id="titolJoc2">
+                <div class="intentsRestants">
+                    <span id="intents"><span>Li queden <span id="nombreIntents">7</span> intents</span>
+                    <h5 id="seleccioLletra">Seleccioni una lletra</h5>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h1 class="guionesPalabra"></h1>
+            <h3 class="mensajePerdedor"><img src="imagenesAhorcado/perder.jpeg" alt="" id="imagenPerder"></h3><br>
+            <h3 class="mensajeGanador"><img src="imagenesAhorcado/ganar.jpeg" alt="" id="imagenGanar"></h3>
+            <span class="palabraJuego"></span><br>
+        </div>  
+        <!-- Panell de lletres per jugar -->
+        <div class="panelLetras">
+            <div class="letra">A</div>
+            <div class="letra">B</div>
+            <div class="letra">C</div>
+            <div class="letra">D</div>
+            <div class="letra">E</div>
+            <div class="letra">F</div>
+            <div class="letra">G</div>
+            <div class="letra">H</div>
+            <div class="letra">I</div>
+            <div class="letra">J</div>
+            <div class="letra">K</div>
+            <div class="letra">L</div>
+            <div class="letra">M</div>
+            <div class="letra">N</div>
+            <div class="letra">Ñ</div>
+            <div class="letra">O</div>
+            <div class="letra">P</div>
+            <div class="letra">Q</div>
+            <div class="letra">R</div>
+            <div class="letra">S</div>
+            <div class="letra">T</div>
+            <div class="letra">U</div>
+            <div class="letra">V</div>
+            <div class="letra">W</div>
+            <div class="letra">X</div>
+            <div class="letra">Y</div>
+            <div class="letra">Z</div>      
+        </div>
+
+        <div id="mostraErrors">
+            <button type="button" id="tornarJugar">Tornar a Jugar</button>
+            <div style="margin-bottom: 10px;">
+                <h4>Has comès <span id="nombreErrors">0</span> errors.</h3>
+
+            </div>
+                <span><h6 style="color: #721121;">Temps per paraula:</h6><h6 class="cronometro"></h6></span>
+                <span><h6 style="color: #721121;" id="textTempsPerLletra">Temps per lletra:</h6><h6 class="cronoPorLetra"></h6></span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
